@@ -3,22 +3,18 @@
 }
 
 .card-inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s ease-in;
   transform-style: preserve-3d;
+  transition: transform 1s ease-in;
 }
 
-.card-inner .front {
+.card-inner .front, .card-inner .back{
   backface-visibility: hidden;
 }
 
 .card-inner .back {
-  backface-visibility: hidden;
   transform: rotateY(-180deg);
-  transition: transform 1s ease-in;
 }
 
-.card:hover .card-inner {
+.card:hover > .card-inner {
   transform: rotateY(180deg);
 }
