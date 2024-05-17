@@ -7,7 +7,7 @@ import pattern from '../public/pattern.png';
 
 const App = () => {
   return (
-    <div className='h-screen w-screen bg-[#0a1e30] flex items-center justify-center'>
+    <div className='h-screen w-screen bg-[#000000] flex items-center justify-center'>
       <div className="container h-[80%] w-[80%] flex">
         <div className="c-left h-[100%] w-[25%] bg-gradient-to-tr from-[#902ae0] via-[#cb1eb5] to-[#e417a1] rounded-tl-2xl rounded-bl-2xl relative flex items-center">
           <div className='h-52 w-80 absolute left-[30%]'>
@@ -50,7 +50,20 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="c-right h-[100%] w-[75%] bg-[#ece6e6] rounded-tr-2xl rounded-br-2xl"></div>
+        <div className="c-right pl-40 h-[100%] w-[75%] bg-[#ece6e6] rounded-tr-2xl rounded-br-2xl">
+          <div className="c-r-form h-[100%] flex flex-col">
+            <div className="c-r-top mt-16 h-[40%] w-[100%] flex flex-col justify-around items-center">
+              <span className='flex flex-col w-[100%]'>Card Number<input type="number" className='w-[80%] p-2 rounded-md border-2 border-[#00000032] outline-none' /></span>
+              <span className='flex flex-col w-[100%]'>Card Holder <input type="text" className='w-[80%] p-2 rounded-md border-2 border-[#00000032] outline-none' /></span>
+            </div>
+            <div className="c-r-btm w-[80%] flex items-center justify-around">
+              <span className='flex flex-col'>Expiration MM<select name="Month" className='p-1 rounded-md border-2 border-[#00000032] outline-none'></select></span>
+              <span className='flex flex-col'>Expiration YY<select name="Year" className='p-1 rounded-md border-2 border-[#00000032] outline-none'></select></span>
+              <span className='flex flex-col'>Cvv <input type="number"  className='p-1 rounded-md border-2 border-[#00000032] outline-none'/></span>
+            </div>
+            <button className='w-[80%] mt-7 p-2 text-white bg-gradient-to-r from-[#902ae0] via-[#cb1eb5] to-[#e417a1] rounded-2xl'>Submit</button>
+          </div>
+        </div>
       </div>
     </div>
   );
